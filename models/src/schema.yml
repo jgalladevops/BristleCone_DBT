@@ -1,0 +1,101 @@
+version: 2
+models:
+  - name: src_activity
+    description: "The model refers the activity table"
+    columns:
+      - name: retailer_name
+        description: "Unique identifier for each retailer"
+        tests:
+          - not_null
+      - name: location_id
+        description: "Unique identifier for each location"
+        tests:
+          - not_null
+      - name: product_id
+        description: "Unique identifier for each product"
+        tests:
+          - not_null
+      - name: sales_date
+        description: "Date of the sales record"
+        tests:
+          - not_null
+      - name: units_in_inventory
+        description: "Number of units in inventory on sales date"
+      - name: units_sold
+        description: "Number of units sold on sales date"
+      - name: sales_amount
+        description: "Total sales amount"
+      - name: inserted_at
+        description: "Record insertion timestamp"
+      - name: retailer_name
+        description: "Unique identifier for each retailer"
+        tests:
+          - not_null
+      - name: location_id
+        description: "Unique identifier for each location"
+        tests:
+          - not_null
+      - name: product_id
+        description: "Unique identifier for each item"
+        tests:
+          - not_null
+      - name: sales_date
+        description: "Date of the sales record"
+        tests:
+          - not_null
+      - name: units_in_inventory
+        description: "Number of units in inventory on sales date"
+      - name: units_sold
+        description: "Number of units sold on sales date"
+      - name: sales_amount
+        description: "Total sales amount"
+      - name: inserted_at
+        description: "Record insertion timestamp"
+  - name: src_item
+    description: "This model refers the item table"
+    columns:
+     - name: product_id
+       description: "Unique identifier for each product"
+       tests:
+         - not_null
+     - name: category_name
+       description: "Product category"
+       tests:
+         - not_null
+     - name: gender
+       description: "Gender segment of product"
+     - name: colour
+       description: "Color of the product"
+     - name: size
+       description: "Size of the product"
+     - name: inserted_at
+       description: "Timestamp of record insertion"
+  - name: src_location
+    description: "The model refer the location table"
+    columns:
+     - name: location_id
+       description: "Unique location identifier"
+       tests:
+         - not_null
+         - unique
+     - name: retailer_name
+       description: "Retailer identifier "
+       tests:
+         - not_null
+     - name: state_name
+       description: "State of the location"
+     - name: location_type
+       description: "Type of location"
+     - name: inserted_at
+       description: "Timestamp of record insertion"
+  - name: src_retailer_metadata
+    description: "The model refers the retailer metadata table"
+    columns:
+     - name: retailer_name
+       description: "Unique retailer identifier"
+       tests:
+         - not_null
+         - unique
+     - name: activity_grain
+       description: "Defines the activity grain for analysis"
+      

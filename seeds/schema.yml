@@ -1,0 +1,6 @@
+version: 2
+seeds:
+  - name: sample_activity
+    description: "Sample activity data for reference"
+    config:
+      quote_columns: true

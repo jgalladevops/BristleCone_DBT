@@ -1,0 +1,46 @@
+version: 2
+
+models:
+    - name: dim_activity_cleanse
+      description: "The model refers the data from the source activity table"
+      columns:
+        - name: retailer_name
+          tests:
+            - not_null
+        
+        - name: product_id
+          tests:
+            - not_null 
+            
+        - name: sales_date
+          tests:
+            - not_null
+
+        - name: units_sold
+          tests:
+            - not_null
+    
+    - name: dim_item_cleanse
+      description: "This table refers the data from the source item table" 
+      columns:
+        - name: product_id
+          tests:
+            - not_null 
+        - name: category_name
+          tests:
+            - not_null
+        - name: gender 
+          tests:
+            - not_null
+            - accepted_values:
+                arguments:
+                  values: ['MENS/UNISEX','WOMENS','KIDS']
+    - name: dim_location_cleanse
+      description: "This model refers the data from the source location table"
+      columns:
+        - name: location_id
+          tests:
+            - unique 
+            - not_null 
+        - name: state_name 
+          

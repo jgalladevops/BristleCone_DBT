@@ -1,0 +1,11 @@
+version: 2
+sources:
+    - name: RAW
+      database: PROJECT_DB
+      schema: PROJECT_RAW_SCHEMA
+      tables:
+          - name: ACTIVITY
+          - name: ITEM
+          - name: LOCATION
+          - name: RETAIL 
+            identifier: RETAILER_METADATA

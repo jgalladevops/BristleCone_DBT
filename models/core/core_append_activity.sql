@@ -9,7 +9,7 @@
 WITH src_activity
 AS
 (
-  SELECT * FROM {{ ref('src_activity') }}
+  SELECT * FROM {{ ref('stg_activity') }}
 )
 select 
 retailer_name,

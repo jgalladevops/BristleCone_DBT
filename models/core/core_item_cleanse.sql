@@ -1,5 +1,5 @@
 {{ config(
-    materialized = 'ephemeral'
+    materialized = 'table'
     )
 }}
 
@@ -11,7 +11,7 @@ with cte_1 as
  
 select
 * from
-{{ ref('src_item') }}
+{{ ref('stg_item') }}
   
 )
  

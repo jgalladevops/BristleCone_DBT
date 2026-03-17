@@ -10,7 +10,7 @@ with cte as
 (
 select
 * from
-{{ ref('src_activity') }}
+{{ ref('stg_activity') }}
   
 )
 select 

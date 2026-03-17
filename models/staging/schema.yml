@@ -1,6 +1,6 @@
 version: 2
 models:
-  - name: src_activity
+  - name: stg_activity
     description: "The model refers the activity table"
     columns:
       - name: retailer_name
@@ -51,7 +51,7 @@ models:
         description: "Total sales amount"
       - name: inserted_at
         description: "Record insertion timestamp"
-  - name: src_item
+  - name: stg_item
     description: "This model refers the item table"
     columns:
      - name: product_id
@@ -70,7 +70,7 @@ models:
        description: "Size of the product"
      - name: inserted_at
        description: "Timestamp of record insertion"
-  - name: src_location
+  - name: stg_location
     description: "The model refer the location table"
     columns:
      - name: location_id
@@ -88,7 +88,7 @@ models:
        description: "Type of location"
      - name: inserted_at
        description: "Timestamp of record insertion"
-  - name: src_retailer_metadata
+  - name: stg_retailer_metadata
     description: "The model refers the retailer metadata table"
     columns:
      - name: retailer_name

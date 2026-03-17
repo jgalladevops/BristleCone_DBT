@@ -7,7 +7,7 @@ with cte_2 as
 (
 select
 * from
-{{ ref('src_location') }}  
+{{ ref('stg_location') }}  
 )
 select 
 location_id,

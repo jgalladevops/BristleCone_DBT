@@ -1,7 +1,7 @@
 version: 2
 
 models:
-    - name: dim_activity_cleanse
+    - name: core_activity_cleanse
       description: "The model refers the data from the source activity table"
       columns:
         - name: retailer_name
@@ -20,7 +20,7 @@ models:
           tests:
             - not_null
     
-    - name: dim_item_cleanse
+    - name: core_item_cleanse
       description: "This table refers the data from the source item table" 
       columns:
         - name: product_id
@@ -35,7 +35,7 @@ models:
             - accepted_values:
                 arguments:
                   values: ['MENS/UNISEX','WOMENS','KIDS']
-    - name: dim_location_cleanse
+    - name: core_location_cleanse
       description: "This model refers the data from the source location table"
       columns:
         - name: location_id

@@ -1,3 +1,3 @@
 select * 
-from {{ ref('dim_activity_cleanse') }}
+from {{ ref('core_activity_cleanse') }}
 where sales_amount < 0
